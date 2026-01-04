@@ -1,0 +1,54 @@
+/* --- RESET & LAYOUT DASAR --- */
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+
+body { padding-top: 80px; /* Kompensasi Navbar Fixed */ background-color: #f4f7f6; }
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2c3e50;
+    padding: 0.8rem 2rem;
+    position: fixed; /* Menempel di atas */
+    top: 0; left: 0; width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* LOGO STYLING */
+.logo-img { height: 45px; width: auto; display: block; }
+
+/* MENU & DROPDOWN */
+.main-menu { display: flex; list-style: none; }
+.main-menu a { color: #ecf0f1; padding: 10px 20px; text-decoration: none; display: block; }
+
+.dropdown-parent { position: relative; } /* JANGKAR */
+.submenu {
+    position: absolute; /* MELAYANG */
+    top: 100%; left: 0;
+    background-color: #34495e;
+    min-width: 180px;
+    display: none; /* SEMBUNYI */
+    list-style: none;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+.dropdown-parent:hover .submenu { display: block; } /* AKSI */
+
+/* TANTANGAN: STATUS ACTIVE & CTA */
+.main-menu a.active {
+    background-color: #e74c3c;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.cta-button {
+    background-color: #2ecc71;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.cta-button:hover { background-color: #27ae60; transform: scale(1.05); }
